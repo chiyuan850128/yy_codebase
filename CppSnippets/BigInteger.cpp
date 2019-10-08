@@ -6,9 +6,8 @@ Description: Define and Test Big Integer class(High precision)
 Reference:
 https://ixs.im/Algorithm/高精度总结/
 https://github.com/curoky/acm/blob/master/template/%E9%AB%98%E7%B2%BE%E5%BA%A6%E6%A8%A1%E6%9D%BF%20-%20%E5%A4%A7%E6%95%B0.md
+https://blog.csdn.net/code4101/article/details/38705155 小伙子根据紫书写的，我还没仔细看
 **************************************************/
-#include <ios>
-#include <stdio.h>
 // choose TRACE #define to print tracking information
 // #define TRACE printf("%s(%d)-<%s>\n", __FILE__, __LINE__, __FUNCTION__);
 #define TRACE
@@ -20,7 +19,7 @@ https://github.com/curoky/acm/blob/master/template/%E9%AB%98%E7%B2%BE%E5%BA%A6%E
 #include <string>
 
 using namespace std;
-#define MAX_L 205 // maximum digits number
+#define MAX_L 505 // maximum digits number
 class bign {
 private:
 public:
@@ -331,13 +330,7 @@ void bign::clean() {
     i--;
   len = i + 1;
 }
-void unit_test();
-int main() {
-  unit_test();
-  return 0;
-}
 
-void constructor_IO_test();
 void Constructor_IO_test() {
   //其实说实话下面这些都是优先调用move_constructor吧
   cout << "Constructor_IO_test" << endl;
@@ -507,4 +500,9 @@ void unit_test() {
   Arithmetic_test();
   Compound_Assignment_test();
   IncDec_test();
+}
+
+int main() {
+  unit_test();
+  return 0;
 }
