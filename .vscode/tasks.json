@@ -1,5 +1,4 @@
-//For Compilation
-{
+{//For Compilation and IntelliSense
     "version": "2.0.0",
     "tasks": [
         {
