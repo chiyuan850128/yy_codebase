@@ -11,7 +11,8 @@
         // "cpp": "cd $dir && g++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc && &'$dir$fileNameWithoutExt'"
 
         "c": "cd $dir && clang '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc --target=x86_64-w64-mingw -std=c11 && &'$dir$fileNameWithoutExt'",
-        "cpp": "cd $dir && clang++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc --target=x86_64-w64-mingw -std=c++17 && &'$dir$fileNameWithoutExt'"
+        "cpp": "cd $dir && clang++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -g -O2 -static-libgcc --target=x86_64-w64-mingw  && &'$dir$fileNameWithoutExt'"
+        //我去掉了-std=c++17，clang++的c++17总出问题。
         // // "c": "cd $dir && clang $fileName -o $fileNameWithoutExt.exe -Wall -g -O2 -static-libgcc --target=x86_64-w64-mingw -std=c11 && $dir$fileNameWithoutExt",
         // // "cpp": "cd $dir && clang++ $fileName -o $fileNameWithoutExt.exe -Wall -g -O2 -static-libgcc --target=x86_64-w64-mingw -std=c++17 && $dir$fileNameWithoutExt"
     }, // 控制Code Runner命令；未注释的仅适用于PowerShell（Win10默认），文件名中有空格也可以编译运行；注释掉的适用于cmd（win7默认），也适用于PS，文件名中有空格时无法运行
